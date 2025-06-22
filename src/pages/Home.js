@@ -11,6 +11,7 @@ import gallery3 from '../assets/images/gallery3.jpg';
 import logo1 from '../assets/images/logo-client1.jpg';
 import logo2 from '../assets/images/logo-client2.jpg';
 import logo3 from '../assets/images/logo-client3.jpg';
+import mainpageBg from '../assets/images/mainpageBg.png'
 
 export default function Home() {
     const services = [
@@ -33,11 +34,12 @@ export default function Home() {
     return (
         <main className="bg-white text-gray-800">
             {/* Hero Section */}
+            {/**/}
             <section
-                className="relative h-[80vh] bg-cover bg-center flex items-center"
-                style={{ backgroundImage: `url(${heroImg})` }}
+                className="relative  h-[80vh] bg-cover bg-center flex items-center"
+                style={{ backgroundImage: `url(${mainpageBg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
             >
-                <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div className="absolute inset-0  bg-opacity-90"></div>
                 <motion.div
                     className="relative text-center px-6 max-w-2xl mx-auto"
                     initial={{ opacity: 0, y: 30 }}

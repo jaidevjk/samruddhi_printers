@@ -997,3 +997,14 @@ option:hover:after {
     color: #555;
     line-height: 1.7;
 } */
+
+.swiper-pagination-bullet {
+    background: #3b82f6 !important;
+    /* Tailwind blue-500 */
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #1d4ed8 !important;
+    /* Tailwind blue-700 */
+}

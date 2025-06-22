@@ -18,6 +18,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import main from '../assets/images/mainlogo.png';
 //import API from './Api';
+import 'bootstrap/dist/css/bootstrap.css';
+import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 function Footer() {
   const [show, setShow] = useState(false);
@@ -49,17 +51,12 @@ function Footer() {
     <div className="">
 
 
-      <footer style={{ margin: "0px" }}>
-
+      {/* <footer style={{ margin: "0px" }}>
         <div className="row " style={{ margin: "5px", marginTop: "20px" }}>
           <div className="col-12 col-sm-12 col-lg-3 col-md-6 footer-info" >
             <h6 className='footer-colm-head'>contact us</h6>
             <p style={{ color: "#fff" }}>
-              {/* <i className="fa fa-map-marker" style={{ float: "left", padding: "0px", width: "25px", }}></i><span>
-                <a href="https://www.google.com/maps/place/Multiplex+Drone+Pvt+Ltd/@12.9616582,77.516885,15z/data=!4m12!1m6!3m5!1s0x0:0xb5274ccd5d4d87ed!2sMultiplex+Drone+Pvt+Ltd!8m2!3d12.9609916!4d77.5168571!3m4!1s0x0:0xb5274ccd5d4d87ed!8m2!3d12.9609916!4d77.5168571?hl=enhttps://maps.app.goo.gl/H5xbVToJ86bMxiPeA"
-                  target="_blank" style={{ color: "inherit", textDecoration: "none", marginBottom: "25px" }}>No.50/1,Manasanagar,
-                  <br /><span style={{ paddingLeft: "25px", }}>Nagarbhavi,Bangalore-560072</span></a></span>
-              <br /> */}
+
               <i
                 className="fa fa-map-marker"
                 style={{ float: "left", padding: "0px", width: "25px" }}
@@ -70,8 +67,7 @@ function Footer() {
                   target="_blank"
                   style={{ color: "inherit", textDecoration: "none", marginBottom: "25px" }}
                 >
-                  {/* Samruddhi Printers,
-                  <br /> */}
+
                   Marsur Main Road, #71 Shop No. 5
                   <br />
                   Mohan Reddy Building, Marsur Gate,
@@ -85,79 +81,50 @@ function Footer() {
               <br />
               <i className="fa fa-phone" aria-hidden="true" style={{ float: "left", padding: "0px", width: "25px", }}></i><span>9591967075</span>
               <br />
-              {/* <i className="fa fa-phone" aria-hidden="true" style={{ float: "left", padding: "0px", width: "25px", }}></i><span>+91-6362900041</span> */}
             </p>
           </div>
-          <div className="col-12 col-sm-12 col-md-12 col-lg-6  blok-link footer-link" style={{ margin: "0px", padding: "0px" }}>
+          <div className="col-12 col-sm-12 col-md-12 col-lg-6  blok-link footer-link footer-info" style={{ margin: "0px", padding: "0px" }}>
             <div className="row" style={{ margin: "0px" }}>
-              <ul className="col-4 col-sm-4 col-lg-4 col-md-4 support-pages">
-                <h6 className='footer-colm-head'>Pages</h6>
-                <li ><a href="/">Home</a></li>
-                <li><a href="/about">About us</a></li>
-                {/* <li><a href="/products">Products</a></li> */}
-                <li><a href="/services">Services</a></li>
+              <ul className="col-4 col-sm-4 col-lg-4 col-md-4 support-pages" >
+                <h6 className='footer-colm-head'>Quick Links</h6>
+                <li ><a href="/" style={{ fontWeight: 'bold' }}>Home</a></li>
+                <li><a href="/about" style={{ fontWeight: 'bold' }}>About us</a></li>
+
+                <li><a href="/services" style={{ fontWeight: 'bold' }}>Services</a></li>
               </ul>
 
 
-              <ul className="col-4 col-sm-4 col-lg-4 col-md-4 support-foot">
+              <ul className="col-4 col-sm-4 col-lg-4 col-md-4 support-foot footer-info">
                 <h6 className='footer-colm-head'>information</h6>
-                <li><a href="/gallery">Gallery</a></li>
-                {/* <li><a href="/newsandevent">News & Events</a></li>
-                <li><a href="/career">Careers</a></li>
-                <li style={{ visibility: "visible" }}><a href="/training">Training</a></li>
-               */}
+                <li><a href="/gallery" style={{ fontWeight: 'bold' }}>Gallery</a></li>
+
               </ul>
 
-              <ul className="col-4 col-sm-4 col-lg-3 col-md-4 support-foot" >
+              <ul className="col-4 col-sm-4 col-lg-3 col-md-4 support-foot footer-info" >
                 <h6 className='footer-colm-head'>support</h6>
-                <li><a href="#" data-bs-toggle="modal" data-bs-target="#terms-conditions">Terms & Conditions</a></li>
-                <li><a href="#" data-bs-toggle="modal" data-bs-target="#refund-policy">Refund Policy</a></li>
-                <li><a href="#" data-bs-toggle="modal" data-bs-target="#shipping-policy">Shipping Policy</a></li>
-                <li ><a href="#" data-bs-toggle="modal" data-bs-target="#privacy-policy">Privacy Policy</a></li>
+                <li><a href="#" data-bs-toggle="modal" data-bs-target="#terms-conditions" style={{ fontWeight: 'bold' }}>Terms & Conditions</a></li>
+                <li><a href="#" data-bs-toggle="modal" data-bs-target="#refund-policy" style={{ fontWeight: 'bold' }}>Refund Policy</a></li>
+                <li><a href="#" data-bs-toggle="modal" data-bs-target="#shipping-policy" style={{ fontWeight: 'bold' }}>Shipping Policy</a></li>
+                <li ><a href="#" data-bs-toggle="modal" data-bs-target="#privacy-policy" style={{ fontWeight: 'bold' }}>Privacy Policy</a></li>
               </ul>
             </div>
 
           </div>
 
-          <div className="col-12 col-sm-12 col-md-6 col-lg-3  footer-subscribe">
+          <div className="col-12 col-sm-12 col-md-6 col-lg-3  footer-subscribe support-foot footer-info">
             <h6 className='footer-colm-head'>subscribe</h6>
             <form className="subscribe-form" >
-              {/* <form className="subscribe-form" onSubmit={Subscriber} */}
               <div className="input-group mb-3">
                 <input type="email" className="form-control" name="subscriber" placeholder="subscribe" aria-label="Username" aria-describedby="basic-addon1" required />
                 <button className="input-group-text text-light" style={{ backgroundColor: "#1da912" }}>send</button>
               </div>
             </form>
           </div>
+
         </div>
-        {/* <br /> */}
 
-        {/* <div className="" style={{ textAlign: "center", padding: "0px", paddingRight: "0%", width: "100%", margin: "0px" }}>
-          <a href="#" className="logo-disappear" style={{ textAlign: "center", padding: "0px" }}><img src={main} alt="logo" style={{ height: "60px", width: "300px", textAlign: "center", paddingRight: "0%" }} /></a>
 
-        </div> */}
-        {/* <div className="footer-bottom" style={{ margin: "0px", padding: "0px" }}>
-          <div className="row justify-content-between copyright" style={{ margin: "0px" }}>
-            <div className="col-12 col-md-4 copyRightHolder v-II text-center pt-md-2 pb-md-2 py-2">
-              <p className="mb-0">
-                &#169; Copyright : <a>Samruddhi Printers.</a>
-              </p>
-            </div>
-            <div
-              className="col-12 col-md-3 mt-2"
-              style={{ marginTop: "20px !important", color: " #fff" }}
-            >
-              <p className="text-center">
-                <a href="/" className="logo-disappear">
-                  <img src={main} width={"20%"} alt="" />
-                </a>
 
-              </p>
-            </div>
-
-          </div>
-
-        </div> */}
         <div className="footer-bottom" style={{ margin: "0px", padding: "0px", paddingTop: "10px", borderTop: "2px solid green" }}>
           <div className="row  copyright" style={{ margin: "0px", padding: "0px", }}>
             <div className="col-12 col-md-4 copyRightHolder v-II text-center" style={{ margin: "0px", padding: "0px", }}>
@@ -165,30 +132,168 @@ function Footer() {
                 &#169; Copyright : <a>Samruddhi Printers.</a>
               </h6>
             </div>
-            {/* <div
-              className="col-12 col-md-3 mt-2"
-              style={{ marginTop: "20px !important", color: " #fff" }}
-            >
-              <p className="text-center">
-                <a href="/" className="logo-disappear">
-                  <img src={main} width={"20%"} alt="" />
-                </a>
-
-              </p>
-            </div> */}
 
           </div>
 
         </div>
+      </footer> */}
+
+
+      {/* <footer className="bg-dark text-white pt-5 pb-3">
+        <div className="container">
+          <div className="row">
+
+            <div className="col-12 col-md-6 col-lg-3 mb-4">
+              <h5 className="text-uppercase mb-3">Contact Us</h5>
+              <p className="mb-2">
+                <FaMapMarkerAlt className="me-2" />
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Samruddhi+Printers,+Marsur+Main+Road+#71+Shop+No+5+Mohan+Reddy+Building,+Marsur+Gate,+Anekal,+Bengaluru,+Karnataka+562106"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white text-decoration-none"
+                >
+                  Marsur Main Road, #71 Shop No. 5,<br />
+                  Mohan Reddy Building, Marsur Gate,<br />
+                  Anekal, Bengaluru, Karnataka 562106
+                </a>
+              </p>
+              <p className="mb-2">
+                <FaEnvelope className="me-2" />
+                <a href="mailto:samruddhiprinters@gmail.com" className="text-white text-decoration-none">
+                  samruddhiprinters@gmail.com
+                </a>
+              </p>
+              <p>
+                <FaPhone className="me-2" />9591967075
+              </p>
+            </div>
+
+
+            <div className="col-12 col-md-6 col-lg-3 mb-4">
+              <h5 className="text-uppercase mb-3">Quick Links</h5>
+              <ul className="list-unstyled">
+                <li><a href="/" className="text-white text-decoration-none">Home</a></li>
+                <li><a href="/about" className="text-white text-decoration-none">About Us</a></li>
+                <li><a href="/services" className="text-white text-decoration-none">Services</a></li>
+                <li><a href="/gallery" className="text-white text-decoration-none">Gallery</a></li>
+              </ul>
+            </div>
+
+
+            <div className="col-12 col-md-6 col-lg-3 mb-4">
+              <h5 className="text-uppercase mb-3">Policies</h5>
+              <ul className="list-unstyled">
+                <li><a href="#terms-conditions" data-bs-toggle="modal" className="text-white text-decoration-none">Terms & Conditions</a></li>
+                <li><a href="#refund-policy" data-bs-toggle="modal" className="text-white text-decoration-none">Refund Policy</a></li>
+                <li><a href="#shipping-policy" data-bs-toggle="modal" className="text-white text-decoration-none">Shipping Policy</a></li>
+                <li><a href="#privacy-policy" data-bs-toggle="modal" className="text-white text-decoration-none">Privacy Policy</a></li>
+              </ul>
+            </div>
+
+
+            <div className="col-12 col-md-6 col-lg-3 mb-4">
+              <h5 className="text-uppercase mb-3">Subscribe</h5>
+              <form>
+                <div className="input-group">
+                  <input
+                    type="email"
+                    className="form-control"
+                    placeholder="Enter your email"
+                    required
+                  />
+                  <button className="btn btn-success" type="submit">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+
+          <div className="row border-top pt-3 mt-3 text-center">
+            <div className="col-12">
+              <img src={logo} alt="Samruddhi Printers" height="50" className="mb-2" /><br />
+              <small>&copy; {new Date().getFullYear()} Samruddhi Printers. All rights reserved.</small>
+            </div>
+          </div>
+        </div>
+      </footer> */}
+
+      <footer className="bg-dark text-white pt-5 pb-4">
+        <div className="container text-md-left">
+          <div className="row text-md-left">
+
+            <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 className="text-uppercase mb-4 font-weight-bold">Contact Us</h6>
+              <p>
+
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Samruddhi+Printers,+Marsur+Main+Road,#71+Shop+No+5+Mohan+Reddy+Building,+Marsur+Gate,+Anekal,+Bengaluru,+Karnataka+562106"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white text-decoration-none"
+                >
+                  <i className="fa fa-map-marker mr-3"></i>
+                  Marsur Main Road, #71 Shop No. 5,<br />
+                  Mohan Reddy Building, Marsur Gate,<br />
+                  Anekal, Bengaluru, Karnataka 562106
+                </a>
+              </p>
+              <p style={{ width: "auto", cursor: "pointer" }}
+                onClick={() => {
+                  window.location.href = "mailto:samruddhiprinters@gmail.com";
+                }}><i className="fa fa-envelope mr-3"></i> samruddhiprinters@gmail.com</p>
+              <p><i className="fa fa-phone mr-3"></i> +91 95919 67075</p>
+            </div>
+
+
+            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 className="text-uppercase mb-4 font-weight-bold">Quick Links</h6>
+              <p><a href="/" className="text-white text-decoration-none">Home</a></p>
+              <p><a href="/about" className="text-white text-decoration-none">About Us</a></p>
+              <p><a href="/services" className="text-white text-decoration-none">Services</a></p>
+              <p><a href="/gallery" className="text-white text-decoration-none">Gallery</a></p>
+            </div>
+
+
+            <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 className="text-uppercase mb-4 font-weight-bold">Policies</h6>
+              <p><a href="#" data-bs-toggle="modal" data-bs-target="#terms-conditions" className="text-white text-decoration-none">Terms & Conditions</a></p>
+              <p><a href="#" data-bs-toggle="modal" data-bs-target="#refund-policy" className="text-white text-decoration-none">Refund Policy</a></p>
+              <p><a href="#" data-bs-toggle="modal" data-bs-target="#shipping-policy" className="text-white text-decoration-none">Shipping Policy</a></p>
+              <p><a href="#" data-bs-toggle="modal" data-bs-target="#privacy-policy" className="text-white text-decoration-none">Privacy Policy</a></p>
+            </div>
+
+
+            <div className="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+              <h6 className="text-uppercase mb-4 font-weight-bold">Our Expertise</h6>
+              <p><i className="fa fa-check text-success mr-2"></i> High-quality Business Cards</p>
+              <p><i className="fa fa-check text-success mr-2"></i> Custom Posters & Banners</p>
+              <p><i className="fa fa-check text-success mr-2"></i> Offset & Digital Printing</p>
+              <p><i className="fa fa-check text-success mr-2"></i> Flyers, Brochures & Invitations</p>
+            </div>
+          </div>
+
+          <hr className="mb-4" style={{ borderTop: '2px solid green' }} />
+
+          <div className="row align-items-center">
+            <div className="col-md-7 col-lg-8">
+              <p className="text-center text-md-start">
+                © {new Date().getFullYear()} <strong>Samruddhi Printers</strong>. All Rights Reserved.
+              </p>
+            </div>
+            <div className="col-md-5 col-lg-4">
+              <div className="text-center text-md-end">
+                <img src={main} alt="Samruddhi Logo" width="150" className="img-fluid" />
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
-
-
-
 
       <div className="modal fade" id="privacy-policy" tabindex="-1" aria-labelledby="" aria-hidden="true" style={{ minWidth: "60%", }}>
         <div className="modal-dialog modal-dialog-scrollable" style={{ minWidth: "50%" }}>
           <div className="modal-content">
-            <div className="modal-header">
+            <div className="modal-header" style={{ backgroundColor: "#198754" }}>
               <h4 className="heading-main">Privacy Policy</h4>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -231,7 +336,7 @@ function Footer() {
       <div className="modal fade" id="shipping-policy" tabindex="-1" aria-labelledby="" aria-hidden="true" style={{ minWidth: "60%" }}>
         <div className="modal-dialog modal-dialog-scrollable" style={{ minWidth: "50%" }}>
           <div className="modal-content">
-            <div className="modal-header">
+            <div className="modal-header" style={{ backgroundColor: "#198754" }}>
               <h4 className="heading-main">Shipping Policy</h4>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -275,7 +380,7 @@ function Footer() {
       <div className="modal fade" id="refund-policy" tabindex="-1" aria-labelledby="" aria-hidden="true" style={{ minWidth: "60%", }}>
         <div className="modal-dialog modal-dialog-scrollable" style={{ minWidth: "50%" }}>
           <div className="modal-content">
-            <div className="modal-header">
+            <div className="modal-header" style={{ backgroundColor: "#198754" }}>
               <h4 className="heading-main">Refund Policy</h4>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -319,7 +424,7 @@ function Footer() {
       <div className="modal fade" id="terms-conditions" tabindex="-1" aria-labelledby="" aria-hidden="true" style={{ minWidth: "60%", }}>
         <div className="modal-dialog modal-dialog-scrollable" style={{ minWidth: "50%" }}>
           <div className="modal-content">
-            <div className="modal-header">
+            <div className="modal-header" style={{ backgroundColor: "#198754" }}>
               <h4 className="heading-main">Terms and Conditions</h4>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
