@@ -32,7 +32,7 @@ export default function Home() {
     const logos = [logo1, logo2, logo3];
 
     return (
-        <main className="bg-white text-gray-800">
+        <main className="bg-white text-gray-800 home-page">
             {/* Hero Section */}
             {/**/}
             <section

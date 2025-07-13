@@ -21,10 +21,10 @@ export default function App() {
                     </Routes>
                 <Footer />
             </div> */}
-            <div className="flex flex-col min-h-screen">
+            <div className="flex flex-col min-h-screen" >
                 {/* <Navbar /> */}
                 <ResponsiveAppBar />
-                <main className="flex-grow">
+                <main className="flex-grow" >
                     <Routes>
                         {routes.map(({ path, element }, idx) => (
                             <Route key={idx} path={path} element={element} />

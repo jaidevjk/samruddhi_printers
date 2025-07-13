@@ -250,6 +250,7 @@ import MenuItem from '@mui/material/MenuItem';
 import '../App.css';
 import '../style.css';
 import main from '../assets/images/mainlogo.png';
+//import main from '../assets/images/mainlogo1.png';
 
 const ResponsiveAppBar = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -272,20 +273,21 @@ const ResponsiveAppBar = () => {
     ];
 
     const socialLinks = [
-        { icon: "fa-facebook", href: "https://www.facebook.com/multiplexdrone/" },
-        { icon: "fa-youtube", href: "https://www.youtube.com/channel/UCIwF0gAUl27P-6cahvTE7vw" },
-        { icon: "fa-linkedin", href: "https://www.linkedin.com/company/multiplex-drone" }
+        { icon: "fa-facebook", },//href: "/" //https://www.facebook.com/multiplexdrone
+        { icon: "fa-youtube", },//href: "/" //https://www.youtube.com/channel/UCIwF0gAUl27P-6cahvTE7vw
+        { icon: "fa-linkedin", }//href: "/" //https://www.linkedin.com/company/multiplex-drone
     ];
 
     return (
-        <AppBar position="static" sx={{ backgroundColor: "#143E61", minHeight: "70px" }}>
-            <Container maxWidth="xl" sx={{ height: "70px" }}>
+        // <AppBar position="static" sx={{ backgroundColor: "#143E61", minHeight: "80px", maxHeight: "80px", paddingBlock: 0 }}>07dfff  00000036
+        <AppBar position="static" sx={{ backgroundColor: "#fff", minHeight: "80px", maxHeight: "80px", paddingBlock: 0, boxShadow: "0 2px 4px rgba(0,0,0,0.05)" }}>
+            <Container maxWidth="xl" sx={{ height: "80px" }}>
                 <Toolbar disableGutters sx={{ height: "100%" }}>
 
                     {/* Logo */}
                     <Box sx={{ flexGrow: 0 }}>
                         <a href="/" className="logo">
-                            <img src={main} alt="logo" style={{ height: 60, width: 150 }} />
+                            <img src={main} alt="logo" style={{ height: 170, width: 300 }} />
                         </a>
                     </Box>
 
@@ -311,14 +313,15 @@ const ResponsiveAppBar = () => {
                                 href={href}
                                 className="nav-link"
                                 style={{
-                                    color: "white",
+                                    color: "#143E61", // Changed from white
                                     textDecoration: "none",
                                     margin: "0 16px",
-                                    fontWeight: 500,
+                                    fontWeight: 600,
                                     fontSize: "15px",
+                                    transition: "color 0.3s",
                                 }}
                                 onMouseEnter={(e) => (e.currentTarget.style.color = "#F57C00")}
-                                onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
+                                onMouseLeave={(e) => (e.currentTarget.style.color = "#143E61")}
                             >
                                 {name}
                             </a>
@@ -327,9 +330,9 @@ const ResponsiveAppBar = () => {
 
                     {/* Social Icons - Desktop */}
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
-                        <a href="#" onClick={() => setModalShow(true)} className="icon" style={{ color: "white" }}>
+                        {/* <a href="#" onClick={() => setModalShow(true)} className="icon" style={{ color: "143E61" }}>
                             <i className="fa fa-search" />
-                        </a>
+                        </a> */}
                         {socialLinks.map(({ icon, href }, idx) => (
                             <a
                                 key={idx}
@@ -338,11 +341,11 @@ const ResponsiveAppBar = () => {
                                 rel="noopener noreferrer"
                                 className="icon"
                                 style={{
-                                    color: "white",
+                                    color: "#143E61", // Visible on white background
                                     transition: "color 0.3s",
                                 }}
                                 onMouseEnter={(e) => (e.currentTarget.style.color = "#F57C00")}
-                                onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
+                                onMouseLeave={(e) => (e.currentTarget.style.color = "#143E61")}
                             >
                                 <i className={`fa ${icon}`} />
                             </a>
@@ -360,8 +363,8 @@ const ResponsiveAppBar = () => {
                     transformOrigin={{ vertical: 'top', horizontal: 'right' }}
                     PaperProps={{
                         sx: {
-                            backgroundColor: "#143E61",
-                            color: "white",
+                            backgroundColor: "#white",
+                            color: "#143E61",
                             mt: "10px",
                             borderRadius: 0,
                         }
@@ -385,10 +388,10 @@ const ResponsiveAppBar = () => {
 
                     <MenuItem>
                         <Box sx={{ display: 'flex', gap: 2, px: 1 }}>
-                            <a href="#" onClick={() => { setModalShow(true); setAnchorElNav(null); }} className="icon" style={{ color: "white" }}>
+                            {/* <a href="#" onClick={() => { setModalShow(true); setAnchorElNav(null); }} className="icon" style={{ color: "143E61" }}>
                                 <i className="fa fa-search" />
-                            </a>
-                            {socialLinks.map(({ icon, href }, idx) => (
+                            </a> */}
+                            {/* {socialLinks.map(({ icon, href }, idx) => (
                                 <a
                                     key={idx}
                                     href={href}
@@ -396,15 +399,15 @@ const ResponsiveAppBar = () => {
                                     rel="noopener noreferrer"
                                     className="icon"
                                     style={{
-                                        color: "white",
+                                        color: "143E61",
                                         transition: "color 0.3s",
                                     }}
                                     onMouseEnter={(e) => (e.currentTarget.style.color = "#F57C00")}
-                                    onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
+                                    onMouseLeave={(e) => (e.currentTarget.style.color = "143E61")}
                                 >
                                     <i className={`fa ${icon}`} />
                                 </a>
-                            ))}
+                            ))} */}
                         </Box>
                     </MenuItem>
                 </Menu>
