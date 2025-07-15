@@ -18,18 +18,33 @@ import tshirt from '../assets/images/service-flyers.png';
 import letterhead from '../assets/images/service-poster.jpg';
 import envelope from '../assets/images/service-billbook.jpg';
 
+// Add new imports for additional services and online images
+// Use a highly relevant printed boxes image for packaging
+const onlinePackaging = 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80';
+const onlineLargeFormat = 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80';
+const onlineInvitation = 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80';
+const onlineCalendar = 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80';
+const onlineNotebook = 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80';
+const onlineGiftCard = 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80';
+
+// Assign the most relevant local images to each service, and use highly relevant online images where needed
 const services = [
-    { title: 'Offset Printing', category: 'Business', description: 'High-volume printing perfect for books, catalogs, and magazines.', image: offsetPrinting, icon: <FaPrint /> },
-    { title: 'Digital Printing', category: 'Business', description: 'Quick and flexible printing, ideal for small jobs.', image: digitalPrinting, icon: <FaPrint /> },
-    { title: 'Business Cards', category: 'Business', description: 'Personalized cards to give your brand a strong identity.', image: businessCard, icon: <MdBusinessCenter /> },
-    { title: 'Flyers & Brochures', category: 'Business', description: 'Attractive promotional tools for your business.', image: flyerBrochure, icon: <FaTags /> },
-    { title: 'Posters & Banners', category: 'Event', description: 'Large-format prints for events, sales, and announcements.', image: poster, icon: <MdEventNote /> },
-    { title: 'Bill Books', category: 'Business', description: 'Customized bill books for efficient documentation.', image: billbook, icon: <FaEnvelopeOpenText /> },
-    { title: 'Invitation Cards', category: 'Personal', description: 'Elegant invitations tailored to your style.', image: invitation, icon: <FaEnvelopeOpenText /> },
-    { title: 'Product Labels & Stickers', category: 'Custom', description: 'Durable, branded labels for packaging.', image: label, icon: <FaTags /> },
-    { title: 'T-shirt Printing', category: 'Custom', description: 'Vibrant custom T-shirt printing.', image: tshirt, icon: <FaTshirt /> },
-    { title: 'Letterheads', category: 'Business', description: 'Professional letterheads for official documents.', image: letterhead, icon: <MdBusinessCenter /> },
-    { title: 'Envelopes', category: 'Business', description: 'Branded envelopes to complement your identity.', image: envelope, icon: <FaEnvelopeOpenText /> },
+    { title: 'Offset Printing', category: 'Business', description: 'High-volume, cost-effective printing for books, catalogs, and more.', image: require('../assets/images/service-offset.png'), icon: <FaPrint /> },
+    { title: 'Digital Printing', category: 'Business', description: 'Quick, flexible, and vibrant prints for small to medium runs.', image: require('../assets/images/service-digital.jpg'), icon: <FaPrint /> },
+    { title: 'Business Cards', category: 'Business', description: 'Premium cards to make a lasting impression.', image: require('../assets/images/service-businesscard.jpg'), icon: <MdBusinessCenter /> },
+    { title: 'Flyers & Brochures', category: 'Business', description: 'Effective marketing materials for your business.', image: require('../assets/images/service-flyers.png'), icon: <FaTags /> },
+    { title: 'Posters & Banners', category: 'Event', description: 'Large-format prints for events, promotions, and branding.', image: require('../assets/images/service-poster.jpg'), icon: <MdEventNote /> },
+    { title: 'Bill Books', category: 'Business', description: 'Customized bill books for efficient documentation.', image: require('../assets/images/service-billbook.jpg'), icon: <FaEnvelopeOpenText /> },
+    { title: 'Invitation Cards', category: 'Personal', description: 'Elegant invitations for every occasion.', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80', icon: <FaEnvelopeOpenText /> },
+    { title: 'Product Labels & Stickers', category: 'Custom', description: 'Durable, branded labels for packaging and branding.', image: require('../assets/images/service-logo-stickers.webp'), icon: <FaTags /> },
+    { title: 'T-shirt Printing', category: 'Custom', description: 'Vibrant custom T-shirt printing for events and promotions.', image: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80', icon: <FaTshirt /> },
+    { title: 'Letterheads', category: 'Business', description: 'Professional letterheads for official communication.', image: require('../assets/images/service-offset.png'), icon: <MdBusinessCenter /> },
+    { title: 'Envelopes', category: 'Business', description: 'Branded envelopes to complement your identity.', image: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80', icon: <FaEnvelopeOpenText /> },
+    { title: 'Packaging', category: 'Custom', description: 'Custom packaging solutions for your products.', image: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80', icon: <FaPrint /> },
+    { title: 'Large Format Printing', category: 'Event', description: 'Eye-catching prints for displays, signage, and exhibitions.', image: require('../assets/images/service-poster.jpg'), icon: <MdEventNote /> },
+    { title: 'Calendars', category: 'Business', description: 'Personalized calendars for corporate gifting and branding.', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80', icon: <FaTags /> },
+    { title: 'Notebooks', category: 'Business', description: 'Branded notebooks for events, offices, and giveaways.', image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80', icon: <MdBusinessCenter /> },
+    { title: 'Gift Cards', category: 'Personal', description: 'Custom gift cards for promotions and special occasions.', image: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=800&q=80', icon: <FaTags /> },
 ];
 
 const categories = ['All', 'Business', 'Event', 'Personal', 'Custom'];
@@ -46,7 +61,8 @@ export default function Services() {
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-3xl md:text-5xl font-bold z-20 text-[#143E61] text-center mb-10"
+                className="text-3xl md:text-5xl font-bold z-20 text-center mb-10"
+                style={{ color: '#143E61' }}
             >
                 Our Printing Services
             </motion.h2>
@@ -56,51 +72,45 @@ export default function Services() {
                     <button
                         key={cat}
                         onClick={() => setFilter(cat)}
-                        className={`px-4 py-2 rounded-full border ${filter === cat ? 'bg-blue-600 text-white' : 'bg-white text-blue-600'} hover:bg-blue-100`}
+                        className={`px-4 py-2 rounded-full border ${filter === cat ? 'bg-[#143E61] text-white' : 'bg-white text-[#143E61]'} hover:bg-blue-100 font-semibold shadow-sm transition`}
                     >
                         {cat}
                     </button>
                 ))}
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 {filteredServices.map((service, i) => (
                     <motion.div
                         key={i}
                         whileInView={{ opacity: 1, y: 0 }}
                         initial={{ opacity: 0, y: 40 }}
                         transition={{ duration: 0.4, delay: i * 0.1 }}
-                        className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group cursor-pointer"
+                        className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group cursor-pointer border border-gray-100 hover:border-[#143E61] hover:-translate-y-1 duration-300 flex flex-col items-center p-6 text-center"
                         onClick={() => setModalService(service)}
                     >
+                        <div className="text-3xl text-[#143E61] mb-3">{service.icon}</div>
                         <img
                             src={service.image}
                             alt={service.title}
-                            className="h-48 w-full object-cover group-hover:scale-105 transition duration-300"
+                            className="h-32 w-full object-cover rounded-xl mb-4 border group-hover:scale-105 transition-transform duration-300"
                         />
-                        <div className="p-6">
-                            <div className="text-2xl text-blue-700 mb-2">{service.icon}</div>
-                            <h3 className="text-xl font-bold text-blue-800 mb-2 group-hover:text-blue-600 transition">
-                                {service.title}
-                            </h3>
-                            <p className="text-gray-600 text-sm group-hover:text-gray-800 transition-all duration-300">
-                                {service.description}
-                            </p>
-                        </div>
+                        <h3 className="text-lg font-semibold mb-2 text-[#143E61] group-hover:text-[#F57C00] transition">{service.title}</h3>
+                        <p className="text-gray-600 text-sm mb-2 group-hover:text-gray-800 transition-all duration-300">{service.description}</p>
                     </motion.div>
                 ))}
             </div>
 
             {modalService && (
                 <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
-                    <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-md w-full relative">
+                    <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-md w-full relative border-2 border-[#143E61]">
                         <button onClick={() => setModalService(null)} className="absolute top-3 right-4 text-gray-500 hover:text-red-500 text-2xl">×</button>
-                        <img src={modalService.image} alt={modalService.title} className="w-full h-56 object-cover rounded-xl mb-4" />
+                        <img src={modalService.image} alt={modalService.title} className="w-full h-56 object-cover rounded-xl mb-4 border" />
                         <h3 className="text-2xl font-bold text-[#143E61] mb-2">{modalService.title}</h3>
-                        <p className="text-gray-700 mb-4">{modalService.description}</p>
+                        <p className="text-gray-700 mb-4 text-base">{modalService.description}</p>
                         <a
                             href="/contact"
-                            className="inline-block mt-2 bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-800 transition"
+                            className="inline-block mt-2 bg-[#143E61] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#F57C00] transition"
                         >
                             Enquire Now
                         </a>
