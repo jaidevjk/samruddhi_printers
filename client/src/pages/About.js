@@ -1,189 +1,10 @@
-// import React from 'react';
-// import { motion } from 'framer-motion';
-// import Lottie from 'lottie-react';
-// import backgroundAnimation from '../assets/lottie/print-abstract-bg.json';
-// import aboutImage from '../assets/images/service-logo-stickers.webp';
-// import mdImage from '../assets/images/md-kiran-kumar.jpg';
-// import aboutHero from '../assets/images/about_us_banner.png';
-
-// export default function AboutPage() {
-//     return (
-//         <main className="relative overflow-hidden text-gray-800 font-sans bg-white">
-
-//             {/* Hero Section */}
-//             <div
-//                 className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] mb-16 flex items-center justify-center"
-//                 style={{
-//                     backgroundImage: `url(${aboutHero})`,
-//                     backgroundSize: 'cover',
-//                     backgroundPosition: 'center',
-//                 }}
-//             >
-//                 <div className="absolute inset-0 bg-[#143E61]/60 z-0" />
-//                 <motion.h1
-//                     initial={{ opacity: 0, y: -20 }}
-//                     whileInView={{ opacity: 1, y: 0 }}
-//                     transition={{ duration: 0.8 }}
-//                     className="text-3xl md:text-5xl font-bold z-10 text-white text-center"
-//                 >
-//                     Get to Know Us
-//                 </motion.h1>
-//             </div>
-
-//             {/* Background Animation */}
-//             <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none z-0">
-//                 <Lottie animationData={backgroundAnimation} loop autoPlay className="w-full h-full" />
-//             </div>
-
-//             <div className="relative z-10 px-4 md:px-10 max-w-7xl mx-auto">
-
-//                 {/* Overview Section */}
-//                 <div className="grid md:grid-cols-2 gap-14 items-center mb-20">
-//                     <motion.img
-//                         src={aboutImage}
-//                         alt="Samruddhi Printers illustration"
-//                         className="rounded-3xl shadow-xl w-full object-cover border border-gray-200"
-//                         initial={{ opacity: 0 }}
-//                         whileInView={{ opacity: 1 }}
-//                         transition={{ duration: 1 }}
-//                     />
-//                     <motion.div
-//                         initial={{ opacity: 0, x: 40 }}
-//                         whileInView={{ opacity: 1, x: 0 }}
-//                         transition={{ duration: 0.8 }}
-//                         className="text-lg space-y-5 leading-relaxed"
-//                     >
-//                         <p><strong className="text-[#143E61]">Samruddhi Printers</strong> delivers future-ready print solutions blending tradition and innovation. With over a decade of experience, we convert ideas into high-impact visual stories.</p>
-//                         <p>Our full-service printing spans from offset to digital, branding to packaging. We cater to startups, corporates, and creatives with unmatched speed and eco-smart technology.</p>
-//                         <p>Driven by excellence, sustainability, and people-first values, we ensure every print reflects your brand’s true quality.</p>
-//                     </motion.div>
-//                 </div>
-
-//                 {/* MD Section */}
-//                 <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
-//                     <motion.img
-//                         src={mdImage}
-//                         alt="Managing Director Kiran Kumar"
-//                         className="rounded-full w-64 h-64 object-cover border-4 border-[#F57C00] mx-auto shadow-2xl"
-//                         initial={{ opacity: 0, scale: 0.8 }}
-//                         whileInView={{ opacity: 1, scale: 1 }}
-//                         transition={{ duration: 0.6 }}
-//                     />
-//                     <motion.div
-//                         initial={{ opacity: 0, x: 40 }}
-//                         whileInView={{ opacity: 1, x: 0 }}
-//                         transition={{ duration: 0.6 }}
-//                         className="text-center md:text-left space-y-4"
-//                     >
-//                         <h3 className="text-3xl font-bold text-[#143E61]">Kiran Kumar C</h3>
-//                         <p className="text-[#F57C00] font-semibold">Managing Director & Proprietor</p>
-//                         <p className="text-gray-700 text-lg">With an eye for detail and a passion for excellence, Kiran Kumar leads Samruddhi Printers into the future with a commitment to quality, trust, and customer satisfaction.</p>
-//                         <motion.blockquote
-//                             initial={{ opacity: 0 }}
-//                             whileInView={{ opacity: 1 }}
-//                             transition={{ duration: 1 }}
-//                             className="relative bg-[#143E61] text-white px-6 py-5 rounded-xl shadow-md border-l-4 border-[#F57C00] text-lg font-medium leading-relaxed"
-//                         >
-//                             "Excellence in print is not just about machines—it’s about people, purpose, and passion."
-//                         </motion.blockquote>
-//                     </motion.div>
-//                 </div>
-
-//                 {/* Mission & Vision */}
-//                 <section className="grid md:grid-cols-2 gap-10 mb-20">
-//                     {[
-//                         {
-//                             title: 'Our Mission',
-//                             text: 'To craft printing solutions that elevate brands, accelerate growth, and leave lasting impressions.'
-//                         },
-//                         {
-//                             title: 'Our Vision',
-//                             text: 'To be India’s most trusted and innovative printing partner—setting benchmarks for quality, speed, and sustainability.'
-//                         }
-//                     ].map((item, i) => (
-//                         <motion.div
-//                             key={item.title}
-//                             initial={{ opacity: 0, y: 30 }}
-//                             whileInView={{ opacity: 1, y: 0 }}
-//                             transition={{ duration: 0.6, delay: i * 0.2 }}
-//                             className="bg-gradient-to-br from-white via-blue-50 to-white p-8 rounded-2xl shadow-md border border-blue-100"
-//                         >
-//                             <h3 className="text-2xl font-semibold text-[#143E61] mb-3">{item.title}</h3>
-//                             <p className="text-gray-700 leading-relaxed">{item.text}</p>
-//                         </motion.div>
-//                     ))}
-//                 </section>
-
-//                 {/* Core Values */}
-//                 <section className="mb-24">
-//                     <motion.h3
-//                         initial={{ opacity: 0, y: -20 }}
-//                         whileInView={{ opacity: 1, y: 0 }}
-//                         transition={{ duration: 0.6 }}
-//                         className="text-3xl font-semibold text-center text-[#143E61] mb-10"
-//                     >
-//                         Our Core Values
-//                     </motion.h3>
-//                     <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-6 text-center">
-//                         {['Integrity & Trust', 'Customer Centricity', 'Innovation in Every Print', 'Sustainable Practices'].map((value, i) => (
-//                             <motion.div
-//                                 key={value}
-//                                 initial={{ opacity: 0, y: 20 }}
-//                                 whileInView={{ opacity: 1, y: 0 }}
-//                                 transition={{ duration: 0.4, delay: i * 0.2 }}
-//                                 className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300"
-//                             >
-//                                 <h4 className="text-[#F57C00] font-bold text-lg mb-2">{value}</h4>
-//                             </motion.div>
-//                         ))}
-//                     </div>
-//                 </section>
-
-//                 {/* CTA Section */}
-//                 <section className="animated-gradient text-white py-16 px-6 rounded-2xl text-center shadow-xl overflow-hidden relative mb-12">
-//                     <motion.div
-//                         initial={{ opacity: 0, scale: 0.95 }}
-//                         whileInView={{ opacity: 1, scale: 1 }}
-//                         transition={{ duration: 0.6 }}
-//                     >
-//                         <h3 className="text-3xl md:text-4xl font-bold mb-4">Let’s Print Something Great Together</h3>
-//                         <p className="text-lg mb-6">From bulk offset to custom packaging — we bring your brand’s vision to life.</p>
-//                         <a
-//                             href="/contact"
-//                             className="inline-block bg-white text-[#143E61] px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-sm"
-//                         >
-//                             Get in Touch
-//                         </a>
-//                     </motion.div>
-
-//                     <style jsx>{`
-//                         .animated-gradient {
-//                             background: linear-gradient(270deg, #1E5A87, #143E61, #F57C00);
-//                             background-size: 600% 600%;
-//                             animation: gradientMove 15s ease infinite;
-//                             position: relative;
-//                             z-index: 0;
-//                         }
-
-//                         @keyframes gradientMove {
-//                             0% { background-position: 0% 50%; }
-//                             50% { background-position: 100% 50%; }
-//                             100% { background-position: 0% 50%; }
-//                         }
-//                     `}</style>
-//                 </section>
-//             </div>
-//         </main>
-//     );
-// }
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import Lottie from 'lottie-react';
 import backgroundAnimation from '../assets/lottie/print-abstract-bg.json';
-import aboutImage from '../assets/images/service-logo-stickers.webp';
+import aboutImage from '../assets/images/service-businesscard.jpg';
 import mdImage from '../assets/images/md-kiran-kumar.jpg';
-import aboutHero from '../assets/images/about_us_banner.png';
+import aboutHero from '../assets/images/mainpageBg.png';
 
 export default function AboutPage() {
     return (
@@ -198,16 +19,20 @@ export default function AboutPage() {
                     backgroundPosition: 'center',
                 }}
             >
-                <div className="absolute inset-0 bg-opacity-40 flex items-center justify-center z-10">
-                    <motion.h2
+                <div className="absolute inset-0 bg-[#143E61] bg-opacity-60 flex items-center justify-center z-10">
+                    <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="text-3xl md:text-5xl font-bold z-20"
-                        style={{ color: "#143E61" }}
+                        className="text-center z-20"
                     >
-                        Get to Know Us
-                    </motion.h2>
+                        <h2 className="text-3xl md:text-5xl font-extrabold mb-2" style={{ color: '#fff', letterSpacing: '1px' }}>
+                            About Samruddhi Printers
+                        </h2>
+                        <p className="text-lg md:text-2xl text-white font-medium max-w-2xl mx-auto mt-2 opacity-90">
+                            Professional. Reliable. Future-Ready Print Solutions.
+                        </p>
+                    </motion.div>
                 </div>
             </div>
 
@@ -234,9 +59,9 @@ export default function AboutPage() {
                         transition={{ duration: 0.8 }}
                         className="text-lg space-y-5 leading-relaxed"
                     >
-                        <p><strong className="text-[#143E61]">Samruddhi Printers</strong> delivers future-ready print solutions blending tradition and innovation. With over a decade of experience, we convert ideas into high-impact visual stories.</p>
-                        <p>Our full-service printing spans from offset to digital, branding to packaging. We cater to startups, corporates, and creatives with unmatched speed and eco-smart technology.</p>
-                        <p>Driven by excellence, sustainability, and people-first values, we ensure every print reflects your brand’s true quality.</p>
+                        <p><strong className="text-[#143E61]">Samruddhi Printers</strong> delivers professional, future-ready print solutions that blend tradition with innovation. With over a decade of expertise, we transform ideas into high-impact visual stories for businesses and creatives alike.</p>
+                        <p>Our comprehensive services span offset and digital printing, branding, and packaging—delivered with unmatched speed, precision, and eco-smart technology.</p>
+                        <p>We are driven by excellence, sustainability, and a people-first approach, ensuring every print reflects your brand’s true quality and vision.</p>
                     </motion.div>
                 </div>
 

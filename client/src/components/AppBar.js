@@ -306,7 +306,7 @@ const ResponsiveAppBar = () => {
                     </Box>
 
                     {/* Desktop Nav */}
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "center", ml: 3 }}>
+                    {/* <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "center", ml: 3 }}>
                         {navLinks.map(({ name, href }) => (
                             <a
                                 key={name}
@@ -326,7 +326,33 @@ const ResponsiveAppBar = () => {
                                 {name}
                             </a>
                         ))}
+                    </Box> */}
+
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "center", ml: 3 }}>
+                        {navLinks.map(({ name, href }) => {
+                            const isActive = window.location.pathname === href;
+                            return (
+                                <a
+                                    key={name}
+                                    href={href}
+                                    className="nav-link"
+                                    style={{
+                                        color: isActive ? "#F57C00" : "#143E61",
+                                        textDecoration: "none",
+                                        margin: "0 16px",
+                                        fontWeight: 600,
+                                        fontSize: "15px",
+                                        transition: "color 0.3s",
+                                    }}
+                                    onMouseEnter={(e) => (e.currentTarget.style.color = "#F57C00")}
+                                    onMouseLeave={(e) => (e.currentTarget.style.color = isActive ? "#F57C00" : "#143E61")}
+                                >
+                                    {name}
+                                </a>
+                            );
+                        })}
                     </Box>
+
 
                     {/* Social Icons - Desktop */}
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
