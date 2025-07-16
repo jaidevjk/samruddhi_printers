@@ -270,6 +270,18 @@ const ResponsiveAppBar = () => {
         { name: "Services", href: "/services" },
         { name: "Gallery", href: "/gallery" },
         { name: "Contact", href: "/contact" },
+        { name: "FAQ", href: "/faq" },
+        //{ name: "Careers", href: "/careers" },
+        //{ name: "Blog", href: "/blog" },
+        // { name: "Pricing", href: "/pricing" },
+        // { name: "Team", href: "/team" },
+        // { name: "Portfolio", href: "/portfolio" },
+        // { name: "Testimonials", href: "/testimonials" },
+        // { name: "Request Quote", href: "/request-quote" },
+        // { name: "Download Center", href: "/download-center" },
+        // { name: "Contact Map", href: "/contact-map" },
+        // { name: "Partners", href: "/partners" },
+        // { name: "Press", href: "/press" },
     ];
 
     const socialLinks = [
@@ -280,8 +292,8 @@ const ResponsiveAppBar = () => {
 
     return (
         // <AppBar position="static" sx={{ backgroundColor: "#143E61", minHeight: "80px", maxHeight: "80px", paddingBlock: 0 }}>07dfff  00000036
-        <AppBar position="static" sx={{ backgroundColor: "#fff", minHeight: "80px", maxHeight: "80px", paddingBlock: 0, boxShadow: "0 2px 4px rgba(0,0,0,0.05)" }}>
-            <Container maxWidth="xl" sx={{ height: "80px" }}>
+        <AppBar position="static" sx={{ backgroundColor: "#fff", minHeight: "80px", maxHeight: "80px", paddingBlock: 0, boxShadow: "0 2px 4px rgba(0,0,0,0.05)", paddingInlineEnd: "10px" }}>
+            <Container maxWidth="xl" sx={{ height: "80px", width: "100%", padding: 0, margin: 0 }}>
                 <Toolbar disableGutters sx={{ height: "100%" }}>
 
                     {/* Logo */}
@@ -299,7 +311,7 @@ const ResponsiveAppBar = () => {
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
                             onClick={handleOpenNavMenu}
-                            sx={{ color: "#F57C00" }}
+                            sx={{ color: "#F57C00", border: "1px solid #F57C00", borderRadius: "50%" }}
                         >
                             <MenuIcon />
                         </IconButton>
@@ -393,6 +405,9 @@ const ResponsiveAppBar = () => {
                             color: "#143E61",
                             mt: "10px",
                             borderRadius: 0,
+                            marginRight: "0%",
+                            boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
+
                         }
                     }}
                 >
@@ -401,7 +416,7 @@ const ResponsiveAppBar = () => {
                             <a
                                 href={href}
                                 style={{
-                                    color: "white",
+                                    color: "#143E61",
                                     textDecoration: "none",
                                     fontWeight: 500,
                                     width: "100%",
@@ -411,6 +426,28 @@ const ResponsiveAppBar = () => {
                             </a>
                         </MenuItem>
                     ))}
+                    {/* {navLinks.map(({ name, href }) => {
+                        const isActive = window.location.pathname === href;
+                        return (
+                            <a
+                                key={name}
+                                href={href}
+                                className="nav-link"
+                                style={{
+                                    color: isActive ? "#F57C00" : "#143E61",
+                                    textDecoration: "none",
+                                    margin: "0 16px",
+                                    fontWeight: 600,
+                                    fontSize: "15px",
+                                    transition: "color 0.3s",
+                                }}
+                                onMouseEnter={(e) => (e.currentTarget.style.color = "#F57C00")}
+                                onMouseLeave={(e) => (e.currentTarget.style.color = isActive ? "#F57C00" : "#143E61")}
+                            >
+                                {name}
+                            </a>
+                        );
+                    })} */}
 
                     <MenuItem>
                         <Box sx={{ display: 'flex', gap: 2, px: 1 }}>
