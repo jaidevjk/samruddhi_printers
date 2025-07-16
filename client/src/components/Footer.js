@@ -876,7 +876,7 @@ function Footer() {
           <div className="modal-content">
             <div className="modal-header" style={{ backgroundColor: "#198754" }}>
               <h4 className="heading-main">Privacy Policy</h4>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" className="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body main">
               <div><h6 style={{ color: "black", textAlign: "center" }}>Welcome to www.samruddhiprinters.com</h6></div>
@@ -920,7 +920,7 @@ function Footer() {
           <div className="modal-content">
             <div className="modal-header" style={{ backgroundColor: "#198754" }}>
               <h4 className="heading-main">Shipping Policy</h4>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" className="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body main">
               <div><h6 style={{ color: "black", textAlign: "center" }}>Welcome to www.samruddhiprinters.com</h6></div>
@@ -964,7 +964,7 @@ function Footer() {
           <div className="modal-content">
             <div className="modal-header" style={{ backgroundColor: "#198754" }}>
               <h4 className="heading-main">Refund Policy</h4>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" className="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body main">
               <div><h6 style={{ color: "black", textAlign: "center" }}>Welcome to www.samruddhiprinters.com</h6></div>
@@ -1008,7 +1008,7 @@ function Footer() {
           <div className="modal-content">
             <div className="modal-header" style={{ backgroundColor: "#198754" }}>
               <h4 className="heading-main">Terms and Conditions</h4>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" className="btn-close text-[#143E61]" data-bs-dismiss="modal" aria-label="Close" style={{ color: "#143E61" }}></button>
             </div>
             <div className="modal-body main">
               <div><h6 style={{ color: "black", textAlign: "center" }}>Welcome to www.samruddhiprinters.com</h6></div>

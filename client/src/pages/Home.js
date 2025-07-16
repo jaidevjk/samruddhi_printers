@@ -286,7 +286,7 @@ export default function Home() {
 
             {/* Testimonials Section */}
             <TestimonialSlider />
-
+            <br></br>
             {/* CTA Section */}
             <section className="py-16 px-4 bg-blue-600 text-white text-center">
                 <motion.div
@@ -308,6 +308,57 @@ export default function Home() {
                 </motion.div>
             </section>
             <br></br>
+
+            {/* Discover More Section */}
+            <section className="py-16 px-4 max-w-7xl mx-auto text-align-center align-items-center">
+                <motion.h2
+                    className="text-center text-3xl md:text-4xl font-bold mb-4"
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    style={{ color: '#143E61' }}
+                >
+                    Discover More
+                </motion.h2>
+                <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">Explore more about our services, partners, and resources. Click on any card to learn more or get started with us.</p>
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <a href="/portfolio" className="flex flex-col items-center justify-between bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl transition p-6 text-center h-56 group">
+                        <span className="text-4xl mb-3 group-hover:text-[#F57C00] transition">📁</span>
+                        <h3 className="text-lg font-semibold text-[#F57C00] mb-2">Portfolio</h3>
+                        <p className="text-gray-600 text-sm">See our best works and case studies.</p>
+                    </a>
+                    <a href="/testimonials" className="flex flex-col items-center justify-between bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl transition p-6 text-center h-56 group">
+                        <span className="text-4xl mb-3 group-hover:text-[#F57C00] transition">💬</span>
+                        <h3 className="text-lg font-semibold text-[#F57C00] mb-2">Testimonials</h3>
+                        <p className="text-gray-600 text-sm">Read what our customers say about us.</p>
+                    </a>
+                    {/* <a href="/request-quote" className="flex flex-col items-center justify-between bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl transition p-6 text-center h-56 group">
+                        <span className="text-4xl mb-3 group-hover:text-[#F57C00] transition">📝</span>
+                        <h3 className="text-lg font-semibold text-[#F57C00] mb-2">Request a Quote</h3>
+                        <p className="text-gray-600 text-sm">Get a custom quote for your project.</p>
+                    </a> */}
+                    {/* <a href="/download-center" className="flex flex-col items-center justify-between bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl transition p-6 text-center h-56 group">
+                        <span className="text-4xl mb-3 group-hover:text-[#F57C00] transition">⬇️</span>
+                        <h3 className="text-lg font-semibold text-[#F57C00] mb-2">Download Center</h3>
+                        <p className="text-gray-600 text-sm">Download templates and catalogs.</p>
+                    </a> */}
+                    {/* <a href="/contact-map" className="flex flex-col items-center justify-between bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl transition p-6 text-center h-56 group">
+                        <span className="text-4xl mb-3 group-hover:text-[#F57C00] transition">🗺️</span>
+                        <h3 className="text-lg font-semibold text-[#F57C00] mb-2">Contact Map</h3>
+                        <p className="text-gray-600 text-sm">Find us on the map and get in touch.</p>
+                    </a> */}
+                    <a href="/partners" className="flex flex-col items-center justify-between bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl transition p-6 text-center h-56 group">
+                        <span className="text-4xl mb-3 group-hover:text-[#F57C00] transition">🤝</span>
+                        <h3 className="text-lg font-semibold text-[#F57C00] mb-2">Partners</h3>
+                        <p className="text-gray-600 text-sm">Meet our business partners and vendors.</p>
+                    </a>
+                    {/* <a href="/press" className="flex flex-col items-center justify-between bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl transition p-6 text-center h-56 group">
+                        <span className="text-4xl mb-3 group-hover:text-[#F57C00] transition">📰</span>
+                        <h3 className="text-lg font-semibold text-[#F57C00] mb-2">Press & Media</h3>
+                        <p className="text-gray-600 text-sm">See our media coverage and awards.</p>
+                    </a> */}
+                </div>
+            </section>
         </main>
     );
 }
