@@ -43,11 +43,6 @@
     ]
   },
   "overrides": {
-    "webpack": "5.64.4",
-    "webpack-dev-server": "4.11.1",
-    "svgo": "2.8.0"
-  },
-  "resolutions": {
-    "webpack": "5.64.4"
+    "ajv": "6.12.6"
   }
 }
