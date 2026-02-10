@@ -2,10 +2,9 @@
   "name": "samruddhi-printers-site",
   "version": "1.0.0",
   "private": true,
-  "homepage": ".",
   "engines": {
-    "node": "22.x",
-    "npm": ">=10"
+    "node": "18.x",
+    "npm": ">=9"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -46,11 +45,9 @@
     "@testing-library/user-event": "13.5.0"
   },
   "overrides": {
-    "ajv": "6.12.6",
-    "ajv-keywords": "3.5.2",
-    "ajv-formats": "2.1.1",
-    "schema-utils": "3.3.0",
-    "expect": "29.7.0"
+    "schema-utils": "^4.2.0",
+    "ajv": "^8.12.0",
+    "ajv-keywords": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
