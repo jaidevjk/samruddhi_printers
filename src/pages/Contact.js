@@ -231,12 +231,24 @@ export default function Contact() {
                                     required
                                     className="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 text-black"
                                 ></textarea>
-                                <button
+                                {/* <button
                                     type="submit"
                                     className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+                                    disabled
+                                >
+                                    Send Message
+                                </button> */}
+                                <button
+                                    type="submit"
+                                    disabled
+                                    className="bg-blue-600 text-white px-6 py-2 rounded transition
+             disabled:bg-gray-400
+             disabled:cursor-not-allowed
+             disabled:opacity-70"
                                 >
                                     Send Message
                                 </button>
+
                             </form>
                         )}
                     </motion.div>
