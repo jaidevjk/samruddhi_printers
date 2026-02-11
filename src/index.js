@@ -32,6 +32,9 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { usePromiseTracker } from "react-promise-tracker";
 import SimpleReactLightbox from 'simple-react-lightbox';
+import 'font-awesome/css/font-awesome.min.css';
+import 'font-awesome/css/font-awesome.min.css';
+
 
 // const LoadingIndicator = (props) => {
 //   const { promiseInProgress } = usePromiseTracker();

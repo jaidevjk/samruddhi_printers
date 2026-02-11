@@ -5,7 +5,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
 import '../bootstrap-grid.css';
 import '../critical.css';
-import '../font-awesome.min.css';
+//import '../font-awesome.min.css';
 import '../index.css';
 import '../slick.min.css';
 import '../style.css';

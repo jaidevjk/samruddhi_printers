@@ -6,6 +6,8 @@ import ResponsiveAppBar from "./components/AppBar";
 import routes from "./routes";
 import './App.css';
 import whatsappIcon from './assets/images/whatsapp.png';
+import 'font-awesome/css/font-awesome.min.css';
+
 
 export default function App() {
 
