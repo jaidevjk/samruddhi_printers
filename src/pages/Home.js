@@ -22,11 +22,17 @@ import servicePoster from '../assets/images/service-poster.jpg';
 import serviceSticker from '../assets/images/service-stickers.webp';
 import serviceLabel from '../assets/images/service-logo-stickers.webp';
 import serviceLetterhead from '../assets/images/service-offset.png';
-import serviceEnvelope from '../assets/images/service-billbook.jpg';
+import serviceEnvelope from '../assets/images/service-envelope.webp';
+import serviceBillbook from '../assets/images/service-billbook.jpg';
+//service-envelope.webp
 // Online images for missing services
-const onlinePackaging = 'https://images.pexels.com/photos/449813/pexels-photo-449813.jpeg?auto=compress&w=800';
-const onlineLargeFormat = 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80';
-const onlineInvitation = 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80';
+// const packaging = 'https://images.pexels.com/photos/449813/pexels-photo-449813.jpeg?auto=compress&w=800';
+// const largeFormatPrinting = 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80';
+// const onlineInvitation = 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80';
+
+import packaging from '../assets/images/packaging.png';
+import largeFormatPrinting from '../assets/images/largeFormatPrinting.png';
+import invitation from '../assets/images/invitation.png';
 
 export default function Home() {
     const services = [
@@ -57,10 +63,10 @@ export default function Home() {
         { title: 'Product Labels', icon: <FaTags className="text-blue-700 text-3xl mb-2" />, img: serviceLabel, desc: 'Durable, branded labels for all your products.' },
         { title: 'Letterheads', icon: <MdBusinessCenter className="text-blue-700 text-3xl mb-2" />, img: serviceLetterhead, desc: 'Professional letterheads for official communication.' },
         { title: 'Envelopes', icon: <FaEnvelopeOpenText className="text-blue-700 text-3xl mb-2" />, img: serviceEnvelope, desc: 'Branded envelopes to complement your identity.' },
-        { title: 'Invitations', icon: <FaEnvelopeOpenText className="text-blue-700 text-3xl mb-2" />, img: onlineInvitation, desc: 'Elegant invitations for every occasion.' },
-        { title: 'Packaging', icon: <FaPrint className="text-blue-700 text-3xl mb-2" />, img: onlinePackaging, desc: 'Custom packaging solutions for your products.' },
-        { title: 'Large Format Printing', icon: <MdEventNote className="text-blue-700 text-3xl mb-2" />, img: onlineLargeFormat, desc: 'Eye-catching prints for displays, signage, and exhibitions.' },
-    ];
+        { title: 'Invitations', icon: <FaEnvelopeOpenText className="text-blue-700 text-3xl mb-2" />, img: invitation, desc: 'Elegant invitations for every occasion.' },
+        { title: 'Packaging', icon: <FaPrint className="text-blue-700 text-3xl mb-2" />, img: packaging, desc: 'Custom packaging solutions for your products.' },
+        { title: 'Large Format Printing', icon: <MdEventNote className="text-blue-700 text-3xl mb-2" />, img: largeFormatPrinting, desc: 'Eye-catching prints for displays, signage, and exhibitions.' },
+        { title: 'Bill Books', icon: <MdBusinessCenter className="text-blue-700 text-3xl mb-2" />, img: serviceBillbook, desc: 'Custom bill books for your business needs.' },];
 
     return (
         <main className="bg-white text-gray-800 home-page">
