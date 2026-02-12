@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9f148672.css",
+    "main.js": "/static/js/main.cea54bb1.js",
+    "static/media/logo-client3.jpg": "/static/media/logo-client3.0fe17f295fd12d123a1c.jpg",
+    "static/media/logo-client1.jpg": "/static/media/logo-client1.dbd4ea9756c90afa9705.jpg",
+    "static/media/logo-client2.jpg": "/static/media/logo-client2.74f52e922d9b8d484ad6.jpg",
+    "static/media/service-digital.jpg": "/static/media/service-digital.649f8210bc3aec95e4c4.jpg",
+    "static/media/mainpageBg.png": "/static/media/mainpageBg.3b4c2e47afdee5c9f292.png",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.6878d55e3615ccf40c38.svg",
+    "static/media/whatsapp.png": "/static/media/whatsapp.f8fda3382185a5abf7c0.png",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/fontawesome-webfont.eot": "/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/service-flyers.png": "/static/media/service-flyers.059dac66c38ea6c9c47b.png",
+    "static/media/service-offset.png": "/static/media/service-offset.7463ba1a79307146f890.png",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "static/media/service-stickers.webp": "/static/media/service-stickers.8d3c2acbc2edebb1ca7a.webp",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/contact_us_banner.jpg": "/static/media/contact_us_banner.83e5365b1dc09d9b3b9f.jpg",
+    "static/media/bg-2.jpg": "/static/media/bg-2.89c04d4483aa45652afd.jpg",
+    "static/media/mainlogo.png": "/static/media/mainlogo.6af6ecd37de92eab9eed.png",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/bg-3.jpg": "/static/media/bg-3.03232060ef568d3134d4.jpg",
+    "static/media/md-kiran-kumar.jpg": "/static/media/md-kiran-kumar.03232060ef568d3134d4.jpg",
+    "static/media/service-poster.jpg": "/static/media/service-poster.1099810153b08d17ca8d.jpg",
+    "static/media/service-logo-stickers.webp": "/static/media/service-logo-stickers.c9f2ab18755684af147a.webp",
+    "static/media/service-businesscard.jpg": "/static/media/service-businesscard.10000601fe93d2d1f0ce.jpg",
+    "static/media/service-custom-design.webp": "/static/media/service-custom-design.b9a657b123b612d23229.webp",
+    "static/media/service-billbook.jpg": "/static/media/service-billbook.10a45cad85850c059440.jpg",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "static/media/cancel.svg": "/static/media/cancel.1c0f2720c1ab129b2811.svg",
+    "main.9f148672.css.map": "/static/css/main.9f148672.css.map",
+    "main.cea54bb1.js.map": "/static/js/main.cea54bb1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f148672.css",
+    "static/js/main.cea54bb1.js"
+  ]
+}
