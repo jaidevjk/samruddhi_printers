@@ -37,15 +37,30 @@ app.use(cors(corsOptions));
 app.set("view engine", "ejs");
 
 
-// let mongoConnUrl = "mongodb://jaidevk:4AL15ME715@cluster0-shard-00-00.kmhzh.mongodb.net:27017,cluster0-shard-00-01.kmhzh.mongodb.net:27017,cluster0-shard-00-02.kmhzh.mongodb.net:27017/?ssl=true&replicaSet=atlas-9xqepa-shard-0&authSource=admin&retryWrites=true&w=majority";
-// mongoose.connect(mongoConnUrl, { useNewUrlParser: true });
-// let db = mongoose.connection;
-// db.on("error", function (error) {
-//   console.log("Error came in connecting" + error);
-// });
-// db.on("open", function () {
-//   console.log(`yes, we are connected to mongodb and the database`);
-// });
+let mongoConnUrl = "mongodb://jaidevk:4AL15ME715@cluster0-shard-00-00.kmhzh.mongodb.net:27017,cluster0-shard-00-01.kmhzh.mongodb.net:27017,cluster0-shard-00-02.kmhzh.mongodb.net:27017/?ssl=true&replicaSet=atlas-9xqepa-shard-0&authSource=admin&retryWrites=true&w=majority";
+mongoose.connect(mongoConnUrl, { useNewUrlParser: true });
+let db = mongoose.connection;
+db.on("error", function (error) {
+  console.log("Error came in connecting" + error);
+});
+db.on("open", function () {
+  console.log(`yes, we are connected to mongodb and the database`);
+});
+//let mongoConnUrl = "mongodb+srv://jaidev:4AL15ME715@cluster0.wc8xypi.mongodb.net/?samruddhi_printers=Cluster0"
+//let mongoConnUrl = "mongodb+srv://jaidevk:4AL15ME715@cluster0.kmhzh.mongodb.net/?retryWrites=true&w=majority";
+
+//const mongoose = require("mongoose");
+
+// mongoose.set('strictQuery', false);
+
+// const mongoConnUrl =
+//   "mongodb+srv://jaidev:4AL15ME715@cluster0.wc8xypi.mongodb.net/samruddhi_printers?retryWrites=true&w=majority&appName=Cluster0";
+
+// mongoose.connect(mongoConnUrl)
+//   .then(() => console.log("✅ Connected to MongoDB"))
+//   .catch(err => console.log("❌ Error connecting:", err));
+
+
 
 
 app.use(function (req, res, next) {
